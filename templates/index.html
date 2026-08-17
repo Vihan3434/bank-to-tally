@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Bank PDF to Tally XML</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+
+        .upload-box {
+            border: 2px dashed #2563eb;
+            border-radius: 14px;
+            padding: 35px 20px;
+            background: #f8fbff;
+            margin-bottom: 20px;
+        }
+
+        .upload-box p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: white;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 9px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .note {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">🏦</div>
+
+    <h1>Bank PDF to Tally XML</h1>
+
+    <p class="subtitle">
+        Convert your bank statement PDF into a Tally-compatible XML file.
+    </p>
+
+    <form action="/" method="POST" enctype="multipart/form-data">
+
+        <div class="upload-box">
+
+            <p><strong>Select Bank Statement PDF</strong></p>
+
+            <input
+                type="file"
+                name="pdf_file"
+                accept=".pdf"
+                required
+            >
+
+        </div>
+
+        <button type="submit">
+            Convert to Tally XML
+        </button>
+
+    </form>
+
+    <p class="note">
+        Your PDF is processed only for conversion.
+    </p>
+
+</div>
+
+</body>
+</html>
